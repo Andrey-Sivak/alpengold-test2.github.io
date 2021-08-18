@@ -122,6 +122,7 @@
     width: 100%;
 
     & .slick-arrow {
+      z-index: 10;
       top: 89px;
       width: 23px;
       height: 36px;
@@ -136,6 +137,44 @@
 
       &:before {
         content: none;
+      }
+    }
+  }
+
+  &.dark {
+
+    .product__item {
+
+      &_img {
+        margin-bottom: -10px;
+        margin-top: -15px;
+        position: relative;
+        
+        &:before {
+          box-sizing: border-box;
+          content: 'баллов';
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          color: #fff;
+          font-style: italic;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 14px;
+          padding-bottom: 6px;
+          z-index: 1;
+          position: absolute;
+          background-color: #14592D;
+          width: 70px;
+          height: 50px;
+          border-radius: 12px;
+          background-image: url('../../img/+10.svg');
+          background-repeat: no-repeat;
+          background-size: initial;
+          background-position: center 10px;
+          left: 52%;
+          top: 48%;
+        }
       }
     }
   }

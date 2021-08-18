@@ -1,11 +1,11 @@
 .home-page {
 
   & .first-section {
-    padding-top: 94px;
+    padding-top: 129px;
     position: relative;
     z-index: 1;
     margin-bottom: -60px;
-    padding-bottom: 60px;
+    padding-bottom: 147px;
 
     @media(min-width: 767px) {
       background-image: url('../../img/first-sec-bg-pc.png');
@@ -23,7 +23,8 @@
     }
 
     @include response-to(small) {
-      padding-bottom: 125px;
+      padding-top: 91px;
+      padding-bottom: 366px;
 
       &:before {
         position: absolute;
@@ -34,6 +35,60 @@
         left: -15px;
         right: -15px;
         background: linear-gradient(360deg, rgba(255, 195, 39, 0.7) 2.05%, rgba(255, 195, 39, 0) 90.53%);
+      }
+    }
+
+    &__img-decor {
+      position: absolute;
+      z-index: 0;
+
+      &.baloon {
+        top: -180px;
+        left: 50%;
+
+        @include response-to(small) {
+          width: 91px;
+          top: -150px;
+          height: 133px;
+          left: 10px;
+        }
+      }
+
+      &.note1 {
+        left: -40px;
+        bottom: -150px;
+
+        @include response-to(medium) {
+          display: none;
+        }
+      }
+
+      &.note2 {
+        top: 10px;
+        right: -30px;
+
+        @include response-to(small) {
+          right: 55px;
+          top: 150px;
+        }
+      }
+
+      &.present {
+        bottom: -165px;
+        right: 35%;
+
+        @include response-to(medium) {
+          display: none;
+        }
+      }
+
+      &.lamp {
+        bottom: -50px;
+        right: -30px;
+
+        @include response-to(medium) {
+          display: none;
+        }
       }
     }
 
@@ -49,7 +104,8 @@
       transform: rotate(-3deg);
       width: fit-content;
       position: relative;
-      left: 136px;
+      left: 25px;
+      bottom: -36px;
       padding: 3px 10px;
 
       & br {
@@ -58,8 +114,8 @@
 
       @include response-to(small) {
         position: absolute;
-        top: 160px;
-        left: 32px;
+        bottom: unset;
+        left: 26px;
         font-size: 13px;
 
         & br {
@@ -84,7 +140,7 @@
 
         @include response-to(small) {
           background-image: url('../../img/rt-mob.svg');
-          width: 13px;
+          width: 14px;
         }
       }
 
@@ -94,21 +150,25 @@
         background-position: right center;
 
         @include response-to(small) {
-          content: none;
+          background-image: url('../../img/lt-mob.svg');
+          width: 14px;
         }
       }
     }
 
-    & .azamat-img {
+    & .chokos-img {
       position: absolute;
-      bottom: -100px;
-      right: 94px;
+      bottom: -80px;
+      right: calc((100vw - 1150px) / 2);
       z-index: 1;
 
       @include response-to(small) {
-        width: 225px;
-        height: 354px;
-        right: -15px;
+        width: 368px;
+        height: 375px;
+        right: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -36px;
       }
     }
 
@@ -119,7 +179,7 @@
       @include response-to(small) {
         width: 360px;
         height: 153px;
-        margin: 0 auto 159px;
+        margin: 0 auto 0;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -178,7 +238,7 @@
     margin-top: -27px;
     position: relative;
     z-index: 2;
-    padding-top: 75px;
+    padding-top: 115px;
     padding-bottom: 82px;
 
     @include response-to(small) {
@@ -216,8 +276,8 @@
         width: 115px;
         height: 100px;
         display: none;
-        left: 30px;
-        top: -120px;
+        right: 30px;
+        top: -150px;
       }
 
       @include response-to(small) {
@@ -240,7 +300,7 @@
       position: absolute;
       z-index: 2;
       left: -245px;
-      bottom: -200px;
+      bottom: -260px;
       width: 464px;
       height: 358px;
 
@@ -252,7 +312,7 @@
         display: none;
         position: absolute;
         z-index: 2;
-        top: 89.5%;
+        top: 93.5%;
         left: 50%;
         transform: translateX(-55%);
         width: 510px;
@@ -277,8 +337,8 @@
     }
 
     &__item {
-      width: 280px;
-      padding: 10px 30px;
+      width: 320px;
+      padding: 10px 4px;
 
       @include response-to(small) {
         margin-bottom: 50px;
@@ -288,7 +348,12 @@
         width: 100%;
         position: relative;
         @include flex-center();
+        height: 220px;
         margin-bottom: -5px;
+
+        @include response-to(small) {
+          height: 230px;
+        }
 
         & img {
           max-width: 100%;
@@ -310,7 +375,7 @@
       }
 
       &_caption {
-        color: $red-color;
+        color: #3D200D;
         font-style: italic;
         font-weight: 900;
         font-size: 34px;
