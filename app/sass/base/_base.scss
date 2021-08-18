@@ -1,0 +1,67 @@
+.container {
+  max-width: $container;
+  padding: 0;
+  margin: 0 auto;
+
+  @include response-to(large) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.no-scrolling {
+  overflow: hidden;
+}
+
+.parallax-mirror {
+  overflow: visible !important;
+}
+
+.parallax-mirror img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.page-caption {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: $brown-color;
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 53px;
+  margin-top: 44px;
+  margin-bottom: 90px;
+
+  @include response-to(medium) {
+    margin-top: 82px;
+  }
+
+  @include response-to(small) {
+    margin-bottom: 60px;
+  }
+}
+
+.decor {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  height: 250px;
+  z-index: 0;
+  background-image: url('../../img/head-block.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include response-to(medium) {
+    height: 230px;
+    top: 0;
+  }
+
+  @include response-to(small) {
+    height: 223px;
+    background-image: url('../../img/head-block-mob.png');
+  }
+}

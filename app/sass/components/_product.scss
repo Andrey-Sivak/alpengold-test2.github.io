@@ -1,0 +1,223 @@
+.product {
+  background: linear-gradient(217.17deg, #FFFFFF -55.4%, #FFE686 54.82%, #F7B545 152.24%);
+  border-radius: 22px;
+  padding: 20px 12px;
+  color: $brown-color;
+  margin-bottom: 20px;
+
+  @include response-to(small) {
+    margin-bottom: 58px;
+    padding-top: 41px;
+    padding-bottom: 35px;
+  }
+
+  &__header {
+    position: relative;
+    z-index: 3;
+    margin-bottom: 0;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    @include transition-ease;
+
+    @include response-to(small) {
+      justify-content: center;
+    }
+
+    &_brand {
+      display: flex;
+      align-items: center;
+    }
+
+    &_img {
+      flex: 0 0 88px;
+      margin-right: 40px;
+      max-height: 72px;
+
+      @include response-to(small) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -60px;
+        margin-right: 0;
+      }
+    }
+
+    &_title {
+      font-weight: 900;
+      white-space: nowrap;
+      font-size: 21px;
+      color: $brown-color;
+      text-transform: uppercase;
+    }
+
+    &_tool {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $brown-color;
+      @include transition-ease;
+
+      @include response-to(small) {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -52px;
+      }
+
+      &:before {
+        @include transition-ease;
+        white-space: nowrap;
+        position: absolute;
+        content: 'Развернуть список';
+        user-select: none;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $brown-color;
+        opacity: 0.8;
+        font-size: 18px;
+        right: calc(100% + 25px);
+
+        @include response-to(small) {
+          content: none;
+        }
+      }
+
+      &:after {
+        @include transition-ease;
+        position: absolute;
+        content: '';
+        width: 25px;
+        height: 25px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url('../../img/plus.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        z-index: 2;
+
+        @include response-to(small) {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+
+  &__body{
+    opacity: 0;
+    padding-top: 2px;
+    max-height: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+
+    & .slick-arrow {
+      top: 89px;
+      width: 23px;
+      height: 36px;
+
+      &.slick-next {
+        right: 5px;
+      }
+
+      &.slick-prev {
+        left: 5px;
+      }
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  &__item {
+    width: 244px;
+    text-align: center;
+    height: 225px;
+    max-height: 0px;
+    font-size: 16px;
+    position: relative;
+    margin-bottom: 50px;
+
+    @include response-to(small) {
+      margin-bottom: 0;
+    }
+
+    &_img {
+      @include flex-center();
+      margin-bottom: 18px;
+      width: 100%;
+    }
+
+    &_weight {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-style: italic;
+    }
+
+    &_text {
+      font-family: 'OfficinaSans SCC', sans-serif;
+      font-weight: 500;
+    }
+  }
+
+  &.active {
+
+    .product__header {
+      margin-bottom: 20px;
+
+      &_tool {
+
+        @include response-to(small) {
+          width: 18px;
+          height: 18px;
+          background-image: url('../../img/x.svg');
+          background-position: center;
+          background-size: contain;
+          background-color: transparent;
+          top: -30px;
+          left: unset;
+          right: 0;
+          transition: unset;
+        }
+
+        &:before {
+          content: 'Свернуть список';
+
+          @include response-to(small) {
+            content: none;
+          }
+        }
+        
+        &:after {
+          background-image: url('../../img/minus.svg');
+
+          @include response-to(small) {
+            content: none;
+          }
+        }
+      }
+    }
+
+    .product__body {
+      max-height: 2000px;
+      opacity: 1;
+    }
+
+    .product__item {
+      max-height: 100%;
+    }
+  }
+}

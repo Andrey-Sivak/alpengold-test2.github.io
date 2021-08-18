@@ -1,0 +1,41 @@
+@import "libs/slick";
+@import "libs/select2";
+
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/reset";
+@import "base/typography";
+@import "base/base";
+
+@import "includes/header";
+@import "includes/footer";
+
+@import "components/menu";
+@import "components/product";
+@import "components/loader";
+
+@import "pages/home-page";
+@import "pages/cookise";
+@import "pages/faq";
+@import "pages/winners";
+@import "pages/error";
+
+body,
+html {
+  position: relative;
+  overflow-x: hidden;
+  background-color: #461709;
+}
+
+body {
+  font-family: 'OfficinaSans', sans-serif;
+  min-height: 100vh;
+  padding-top: 56px;
+
+  @include response-to(small) {
+    background-image: url('../img/mob-main-bg.png');
+    padding-top: 60px;
+  }
+}
