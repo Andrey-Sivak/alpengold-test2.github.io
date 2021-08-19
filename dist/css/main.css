@@ -1647,12 +1647,6 @@ input[type="number"] {
           top: -150px;
           height: 133px;
           left: 10px; } }
-    .home-page .first-section__img-decor.note1 {
-      left: -40px;
-      bottom: -150px; }
-      @media (max-width: 992px) {
-        .home-page .first-section__img-decor.note1 {
-          display: none; } }
     .home-page .first-section__img-decor.note2 {
       top: 10px;
       right: -30px; }
@@ -1881,6 +1875,14 @@ input[type="number"] {
         -webkit-flex-wrap: wrap;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap; } }
+    .home-page .second-section__wrap .note1 {
+      position: absolute;
+      left: -50px;
+      top: -150px; }
+      @media (max-width: 992px) {
+        .home-page .second-section__wrap .note1 {
+          left: 23px;
+          top: -175px; } }
   .home-page .second-section__item {
     width: 320px;
     padding: 10px 4px; }

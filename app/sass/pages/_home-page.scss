@@ -54,15 +54,6 @@
         }
       }
 
-      &.note1 {
-        left: -40px;
-        bottom: -150px;
-
-        @include response-to(medium) {
-          display: none;
-        }
-      }
-
       &.note2 {
         top: 10px;
         right: -30px;
@@ -333,6 +324,17 @@
 
       @include response-to(small) {
         flex-wrap: wrap;
+      }
+
+      & .note1 {
+        position: absolute;
+        left: -50px;
+        top: -150px;
+
+        @include response-to(medium) {
+          left: 23px;
+          top: -175px;
+        }
       }
     }
 
