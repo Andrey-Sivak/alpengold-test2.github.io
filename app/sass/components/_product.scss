@@ -180,6 +180,7 @@
   }
 
   &__item {
+    user-select: none;
     width: 244px;
     text-align: center;
     height: 225px;
@@ -187,6 +188,10 @@
     font-size: 16px;
     position: relative;
     margin-bottom: 50px;
+
+    & * {
+      user-select: none;
+    }
 
     @include response-to(small) {
       margin-bottom: 0;

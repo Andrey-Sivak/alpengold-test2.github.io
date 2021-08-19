@@ -1491,6 +1491,10 @@ input[type="number"] {
       left: 52%;
       top: 48%; }
   .product__item {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     width: 244px;
     text-align: center;
     height: 225px;
@@ -1498,6 +1502,11 @@ input[type="number"] {
     font-size: 16px;
     position: relative;
     margin-bottom: 50px; }
+    .product__item * {
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
     @media (max-width: 767px) {
       .product__item {
         margin-bottom: 0; } }
