@@ -1921,7 +1921,7 @@ input[type="number"] {
       display: none;
       position: absolute;
       z-index: 2;
-      top: 93.5%;
+      top: 89.5%;
       left: 50%;
       -webkit-transform: translateX(-55%);
           -ms-transform: translateX(-55%);
