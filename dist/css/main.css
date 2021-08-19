@@ -1664,7 +1664,7 @@ input[type="number"] {
           right: 55px;
           top: 150px; } }
     .home-page .first-section__img-decor.present {
-      bottom: -165px;
+      bottom: -205px;
       right: 35%; }
       @media (max-width: 992px) {
         .home-page .first-section__img-decor.present {
@@ -1816,8 +1816,9 @@ input[type="number"] {
       margin-left: 8px; }
       @media (max-width: 992px) {
         .home-page .first-section .main-text__bottom img {
-          width: 46px;
-          height: 29px; } }
+          width: 62px;
+          height: 40px;
+          margin-left: 0; } }
   .home-page .first-section .light-img {
     position: absolute;
     bottom: -158px;

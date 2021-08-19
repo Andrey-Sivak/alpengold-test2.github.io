@@ -65,7 +65,7 @@
       }
 
       &.present {
-        bottom: -165px;
+        bottom: -205px;
         right: 35%;
 
         @include response-to(medium) {
@@ -242,8 +242,9 @@
           margin-left: 8px;
 
           @include response-to(medium) {
-            width: 46px;
-            height: 29px;
+            width: 62px;
+            height: 40px;
+            margin-left: 0;
           }
         }
       }
