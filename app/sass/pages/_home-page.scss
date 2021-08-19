@@ -163,16 +163,89 @@
       }
     }
 
-    & .text-img {
-      position: relative;
-      z-index: 3;
+    & .main-text {
 
-      @include response-to(small) {
-        width: 360px;
-        height: 153px;
-        margin: 0 auto 0;
-        left: 50%;
-        transform: translateX(-50%);
+      &__white {
+        margin-top: -10px;
+        margin-bottom: -30px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transform: rotate(-4deg);
+        font-style: italic;
+        font-weight: 900;
+        font-size: 100px;
+        line-height: 121px;
+        color: #fff;
+        text-transform: uppercase;
+
+        @include response-to(medium) {
+          padding-top: 10px;
+          margin-top: 10px;
+          margin-bottom: -15px;
+          font-size: 60px;
+          white-space: nowrap;
+          line-height: 73px;
+        }
+
+        & span {
+          font-size: 50px;
+          line-height: 60.5px;
+
+          @include response-to(medium) {
+            font-size: 30px;
+            line-height: 36.5px;
+          }
+        }
+      }
+
+      &__yellow {
+        margin-bottom: -10px;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 88px;
+        line-height: 107px;
+        color: #FFC500;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transform: rotate(-4deg);
+        text-transform: uppercase;
+
+        @include response-to(medium) {
+          font-size: 52px;
+          line-height: 63px;
+          margin-bottom: -5px;
+        }
+      }
+
+      &__bottom {
+        transform: rotate(-4deg);
+        display: flex;
+        align-items: center;
+
+        & p {
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          font-style: italic;
+          font-weight: 900;
+          font-size: 30px;
+          line-height: 36px;
+          text-transform: uppercase;
+          background: -webkit-linear-gradient(360deg, #E1B756, #F0DD9E, #E1B654);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          @include response-to(medium) {
+            white-space: nowrap;
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+
+        & img {
+          margin-left: 8px;
+
+          @include response-to(medium) {
+            width: 46px;
+            height: 29px;
+          }
+        }
       }
     }
 
