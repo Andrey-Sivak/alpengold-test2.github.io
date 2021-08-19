@@ -719,11 +719,12 @@
 
         let i = 1;
         let lastOffset = 0;
+        const pageHeight = window.innerHeight;
 
         window.addEventListener('scroll', function (e) {
             const offset = window.pageYOffset;
 
-            if (offset >= elTop) {
+            if (offset + pageHeight >= elTop) {
                 if (offset - lastOffset > 0) {
                     i += 1.5;
                 } else {
