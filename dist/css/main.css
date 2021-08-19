@@ -2023,6 +2023,8 @@ input[type="number"] {
     color: #EB2316;
     border: 1px solid #EB2316; }
   .faq-page .btn {
+    font-family: 'OfficinaSans', sans-serif;
+    cursor: pointer;
     border: none;
     position: relative;
     display: -webkit-box;
