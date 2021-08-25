@@ -2778,10 +2778,8 @@ input[type="number"] {
   .winners-page .date-filter {
     position: relative;
     max-width: 260px;
-    width: 100%; }
-    @media (max-width: 767px) {
-      .winners-page .date-filter {
-        margin: 0 auto 20px; } }
+    width: 100%;
+    margin: 0 auto; }
   .winners-page .date-filter .select {
     min-width: 180px; }
   .winners-page .date-filter .select2-container--below {
@@ -2888,75 +2886,6 @@ input[type="number"] {
   .winners-page .date-filter .select2-container--default .select2-results__option--highlighted[aria-selected],
   .winners-page .date-filter .select2-container--default .select2-results__option[aria-selected=true] {
     color: #682700; }
-  .winners-page .phone-filter {
-    position: relative;
-    max-width: 260px;
-    width: 100%;
-    margin: 0; }
-    @media (max-width: 767px) {
-      .winners-page .phone-filter {
-        margin: 0 auto; } }
-    .winners-page .phone-filter #phone-error {
-      position: absolute;
-      opacity: 0;
-      z-index: -1000; }
-    .winners-page .phone-filter input::-webkit-input-placeholder {
-      color: #682700;
-      font-family: Helvetica;
-      font-weight: 300;
-      font-size: 14px; }
-    .winners-page .phone-filter input::-moz-placeholder {
-      color: #682700;
-      font-family: Helvetica;
-      font-weight: 300;
-      font-size: 14px; }
-    .winners-page .phone-filter input:-ms-input-placeholder {
-      color: #682700;
-      font-family: Helvetica;
-      font-weight: 300;
-      font-size: 14px; }
-    .winners-page .phone-filter input::-ms-input-placeholder {
-      color: #682700;
-      font-family: Helvetica;
-      font-weight: 300;
-      font-size: 14px; }
-    .winners-page .phone-filter input::placeholder {
-      color: #682700;
-      font-family: Helvetica;
-      font-weight: 300;
-      font-size: 14px; }
-    .winners-page .phone-filter input.error {
-      color: red; }
-  .winners-page .phone-filter input:not([type="checkbox"]) {
-    height: 46px;
-    font-weight: normal;
-    font-size: 14px;
-    padding-left: 60px;
-    border: 1px solid transparent;
-    box-shadow: 2px 2px 2px rgba(104, 39, 0, 0.35);
-    border-radius: 30px;
-    width: inherit; }
-  .winners-page .phone-filter input:not([type="checkbox"]):focus {
-    border: 1px solid rgba(104, 39, 0, 0.3); }
-  .winners-page .search {
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 46px;
-    height: 46px;
-    margin: auto;
-    background: url("../img/search.svg") center no-repeat, -webkit-linear-gradient(232.83deg, #FFFFFF -55.4%, #FFE686 54.82%, #F7B545 152.24%) center no-repeat;
-    background: url("../img/search.svg") center no-repeat, linear-gradient(217.17deg, #FFFFFF -55.4%, #FFE686 54.82%, #F7B545 152.24%) center no-repeat;
-    background-size: auto;
-    box-shadow: 2px 2px 2px rgba(104, 39, 0, 0.35);
-    border-radius: 30px;
-    -webkit-transition: all .2s linear;
-    transition: all .2s linear; }
-  .winners-page .search:active {
-    box-shadow: none; }
 
 .error-page {
   background-image: url("../img/choko-bg.png");
