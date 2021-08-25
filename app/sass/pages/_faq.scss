@@ -411,6 +411,19 @@
     @include response-to(medium) {
       max-width: unset;
     }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    a {
+      font-style: italic;
+      text-decoration: underline;
+
+      @include on-event {
+        text-decoration: none;
+      }
+    }
   }
 
   .faq-item-title {

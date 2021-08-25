@@ -229,11 +229,6 @@ window.addEventListener('load', function () {
                 mask:"+7(999)999-99-99",
                 "clearIncomplete": true
             });
-
-            /*$(".card-mask").inputmask({
-                mask:"9999-9999-9999-9999",
-                "clearIncomplete": true
-            });*/
         }
         maskInit();
     })();
@@ -311,6 +306,34 @@ window.addEventListener('load', function () {
             }
 
         });
+    })();
+
+    (function popup() {
+        if (!document.querySelector('.popup')) {
+            return;
+        }
+
+        const popupBtns = [...document.querySelectorAll('[data-popup="popup"')];
+        const popup = document.querySelector('.popup');
+
+        popup.addEventListener('click', hidePopup);
+
+        popupBtns.forEach(p => {
+            p.addEventListener('click', showPopup);
+        });
+
+        function showPopup() {
+            popup.classList.add('active');
+        }
+
+        function hidePopup(e) {
+            const target = e.target;
+
+            if (target.dataset) {
+                e.preventDefault();
+                popup.classList.remove('active');
+            }
+        }
     })();
 });
 

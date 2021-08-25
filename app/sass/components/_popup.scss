@@ -1,0 +1,103 @@
+.popup {
+  position: fixed;
+  z-index: -3;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include flex-center();
+  @include transition-ease;
+  background-color: rgba(#000, .5);
+
+  &.active {
+    opacity: 1;
+    z-index: 100000;
+
+    .popup-window {
+      transform: translateY(0px);
+    }
+  }
+
+  &-window {
+    max-width: 540px;
+    width: 100%;
+    background: linear-gradient(217.17deg, #FFFFFF -55.4%, #FFE686 54.82%, #F7B545 152.24%);
+    box-shadow: -1px 1px 2px rgba(104, 39, 0, 0.75);
+    border-radius: 46px;
+    position: relative;
+    transform: translateY(-100vw);
+    padding: 95px 35px 54px;
+    @include transition-ease;
+
+    @include response-to(small) {
+      max-width: 90%;
+      padding: 65px 21px 58px;
+    }
+  }
+
+  &-text {
+    color: $brown-color;
+    font-weight: 900;
+    font-size: 23px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 58px;
+
+    .mob {
+      display: none;
+
+      @include response-to(small) {
+        display: block;
+      }
+    }
+
+    @include response-to(small) {
+      margin-bottom: 44px;
+    }
+  }
+
+  .close {
+    cursor: pointer;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    display: block;
+    right: 36px;
+    top: 18px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../../img/x.svg');
+  }
+
+  &-btn {
+    font-family: 'OfficinaSans', sans-serif;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 290px;
+    width: 100%;
+    height: 56px;
+    margin: auto;
+    padding: 17px 0;
+    background: radial-gradient(50.17% 63.64% at 49.83% 49.09%, #F70000 0%, #E50000 52.04%, #A70000 100%);
+    box-shadow: 2px 2px 5px #870B18;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    border-radius: 33px;
+    z-index: 1;
+    transition: all .2s linear;
+
+    @include on-event {
+      box-shadow: none;
+    }
+  }
+}
